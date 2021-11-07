@@ -12,6 +12,7 @@
     "express": "~4.16.1",
     "express-validator": "^6.13.0",
     "http-errors": "~1.6.3",
+    "luxon": "^2.0.2",
     "mongoose": "^6.0.12",
     "morgan": "~1.9.1",
     "pug": "2.0.0-beta11"

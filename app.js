@@ -4,8 +4,9 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 let mongoose = require("mongoose");
-let mongoDB =
+let dev_db_url =
   "mongodb+srv://1111:1111@cluster0.qbmk9.mongodb.net/local_library?retryWrites=true&w=majority";
+var mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 let db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection Error"));
